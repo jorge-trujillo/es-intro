@@ -1,0 +1,10 @@
+{ "index" : {"_id" : "1", "_index" : "persons"} }
+{ "name_t" : "Joe Schmoe", "grade_i": 21, "tps_code_s": "XX1", "start_dt": "2001-05-01"}
+{ "index" : {"_id" : "2", "_index" : "persons"} }
+{ "name_t" : "Mark Tuple", "grade_i": 20, "tps_code_s": "AA1", "start_dt": "2006-05-20"}
+{ "index" : {"_id" : "3", "_index" : "persons"} }
+{ "name_t" : "Peter Foo", "grade_i": 27, "tps_code_s": "BB1", "start_dt": "2004-05-01"}
+{ "index" : {"_id" : "4", "_index" : "persons"} }
+{ "name_t" : "Fu Bar", "grade_i": 27, "tps_code_s": "BB1", "start_dt": "2010-03-01"}
+{ "index" : {"_id" : "5", "_index" : "persons"} }
+{ "name_t" : "Grey Bar", "grade_i": 27, "tps_code_s": "BB1", "start_dt": "2011-01-01"}
