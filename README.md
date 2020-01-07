@@ -21,8 +21,8 @@ https://chrome.google.com/webstore/detail/elasticsearch-head/ffmkiejjmecolpfloof
 
 ES indices are bootstrapped using a JSON mapping, which contains all the field definitions for the index. ES can attempt to "infer" field types if you do not provide field definitions, but in most cases this is not recommended. This toy example contains the following:
 
-* **default_schema.json** - Sample mappings for a `persons` index, containing one type for `person`
-* **sample_data.json** - Sample bulk data containing 3 records
+* **default_schema.json** - Sample mappings, that leverage field post fixes (e.g. `_t` for text or `_i` for integers) to make adding fields easier.
+* **sample_data.json** - Sample bulk data containing 3 records.
 
 The following steps assume you are running a local instance of ES on your machine on port 9200.
 
