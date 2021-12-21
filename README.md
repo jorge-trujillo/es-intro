@@ -46,7 +46,7 @@ You can use ES Head to issue queries to index, or you can use curl.
 -XPOST -H "Content-Type: application/json" 'http://localhost:9200/_search' --data-binary @query.json
 ```
 
-Here is an example index, which just leverages the name field:
+Here is an example query, which just leverages the name field:
 
 ### Get records that match "grey" or "bar"
 
