@@ -1,7 +1,7 @@
 version: '2'
 services:
   elasticsearch-local:
-    image: elasticsearch:7.5.1
+    image: elasticsearch:7.16.2
     container_name: elasticsearch-local
     environment:
       ES_JAVA_OPTS: -Xmx1g -Xms1g
@@ -11,7 +11,7 @@ services:
       http.cors.allow-origin: /(https?:\/\/localhost(:[0-9]+)?|chrome-extension.*)/
       cluster.name: 'product-search-test'
     volumes:
-      - /Users/z013tp2/git/jorgeatrujillo/es-example/data:/usr/share/elasticsearch/data
+      - "$DATA_FOLDER:/usr/share/elasticsearch/data"
     ports:
       - "9200:9200"
       - "9300:9300"

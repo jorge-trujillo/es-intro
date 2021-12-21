@@ -2,15 +2,18 @@
 
 ## Running ES
 
-The simplest way to run ES is using Docker. To run version `7.5.1` using docker:
+The simplest way to run ES is using Docker. To run version `7.16.2` using docker:
 
 ```bash
-docker run -d --name elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:7.5.1
+docker run -d --name elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:7.16.2
 ```
 
 You can also use the provided `compose` file, which will also has a volume mount to store the data locally. This means your test data will _survive container restarts_.
 
+You should set the `DATA_FOLDER` variable to a folder on your machine using the `.env` file.
+
 ```
+echo "DATA_FOLDER=/folder/on/my/machine" > .env
 docker-compose -f es-compose.yml up -d
 ```
 
@@ -38,7 +41,12 @@ To index records:
 curl -XPOST -H "Content-Type: application/json" 'http://localhost:9200/_bulk' --data-binary @sample_data.json
 ```
 
-You can use Kopf to issue queries to index, or you can use curl. Here is an example index, which just leverages the name field:
+You can use ES Head to issue queries to index, or you can use curl.
+```bash
+-XPOST -H "Content-Type: application/json" 'http://localhost:9200/_search' --data-binary @query.json
+```
+
+Here is an example query, which just leverages the name field:
 
 ### Get records that match "grey" or "bar"
 
